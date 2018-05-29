@@ -13,7 +13,8 @@ var options = {
 
 //  Local : 'mongodb://localhost:27027/bigpolicy'
 //  Remote: 'mongodb://bpqa:bpqa81@ds119436.mlab.com:19436/bpqa'
-var MNG_URL = 'mongodb://localhost:27027/bigpolicy';
+var MNG_URL = 'mongodb://bpqa:bpqa81@ds119436.mlab.com:19436/bpqa';
+// var MNG_URL = 'mongodb://localhost:27027/bigpolicy';
 
 try {
   console.log('  𝖄 Mongoose connection:' + MNG_URL);
