@@ -1,14 +1,17 @@
 ## Deployment: cd to project, build, copy assets to the local deploy folder, deploy
 
 cd /Users/rosty/dev/BP/bp/
+yarn
 npm run build-prod
-rsync -a /Users/rosty/dev/BP/bp/dist/* /Users/rosty/dev/BP/bp/fb/public
-cd fb
+rsync -a dist/* fb/public
+cd fb/functions
+yarn
+cd ../
 firebase deploy
 
 ## Single command:
 
-cd /Users/rosty/dev/BP/bp/ && npm run build-prod && rsync -a /Users/rosty/dev/BP/bp/dist/* /Users/rosty/dev/BP/bp/fb/public && cd fb && firebase deploy
+cd /Users/rosty/dev/BP/bp/ && yarn && npm run build-prod && rsync -a dist/* fb/public && cd fb/functions && yarn && cd ../ && firebase deploy
 
 =====================
 
